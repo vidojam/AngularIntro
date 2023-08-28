@@ -17,10 +17,35 @@ export class AppComponent {
     console.log('Button Click Event worked');
   }
 
-  onKeyup($event: any) {
-    // console.log('Keyup event working');
-    console.log($event.keyCode);
+  // console.log('Keyup event working');
+  // console.log($event.keyCode);
+
+  // Event filtering - gets Enter key pressed in inspector
+  // onKeyup() {
+  //     console.log('Enter key pressed');
+  // }
+
+  // How we get the value in the text box
+  // onKeyup($event: any) {
+  //     console.log($event.target.value);
+  // }
+
+  // Get variable username is used to capture the parameter
+  onKeyup(username: any) {
+      console.log(username);
   }
+
+  
+
+
+  // onKeyup($event: any) {
+  //   // console.log('Keyup event working');
+  //   // console.log($event.keyCode);
+    
+  //   if($event.keyCode == 13 ){
+  //     console.log('Enter key pressed');
+  //   }
+  // }
 
 
 

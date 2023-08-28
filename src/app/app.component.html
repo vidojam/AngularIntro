@@ -6,7 +6,16 @@
 <!-- event binding / some kind of action-->
 <button (click) = "buttonClick()" > Click Me </button>
 
-<input type="text" (keyup) = "onKeyup($event)" >
+<!-- <input type="text" (keyup) = "onKeyup($event)" > -->
+
+<!-- Event filtering -->
+<!-- <input type="text" (keyup.enter) = "onKeyup()" > -->
+
+<!-- How to get the type value -->
+<!-- <input type="text" (keyup.enter) = "onKeyup($event)" > -->
+
+<!-- get username in textbox -->
+<input type="text" (keyup.enter) = "onKeyup(username.value)" #username >
 
 
 
