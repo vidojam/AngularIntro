@@ -1,41 +1,20 @@
-<!-- <h1 class = "text-red">Angular App</h1> -->
-<h1 [class.text-red] = "bool" >Angular App</h1>
+<div class="form-area">
+  <h1>Post Form</h1>
+  <br><Br>
+    <input type="text" placeholder="Post Title" [(ngModel)] = "postTitle" >
+    <br><Br>
+    <textarea cols="30" rows="10" placeholder="Post Details" [(ngModel)] = "postDetails"></textarea>
+    <br><Br>
+    <input type="text" placeholder="Post Image URL"[(ngModel)] = "postURL" >
+    <br><Br>
+    <input type="text" placeholder="Post URL" [(ngModel)] = "postURL">
+    <br><Br>
+    <input type="checkbox" [(ngModel)] = "addBackground"> Add Background
+    <br><Br>
 
-<h1 [style.color] = "bool? 'blue' : 'red' " > Style Binding</h1>
+</div>
 
-<!-- event binding / some kind of action-->
-<button (click) = "buttonClick()" > Click Me </button>
-
-<!-- <input type="text" (keyup) = "onKeyup($event)" > -->
-
-<!-- Event filtering -->
-<!-- <input type="text" (keyup.enter) = "onKeyup()" > -->
-
-<!-- How to get the type value -->
-<!-- <input type="text" (keyup.enter) = "onKeyup($event)" > -->
-
-<!-- get username in textbox -->
-<input type="text" (keyup.enter) = "onKeyup(username.value)" #username >
-
-
-
-<!-- <p> {{message}} </p> -->
-<!-- <p> {{1 + 2}} </p>     <result: 3 in app.component.ts> -->
-
-
-
-<!-- Property Binding -->
-<!-- 
-<img  src="{{imgUrl}}" alt="moose"> -->
-<!-- <img  [src]="imgUrl" alt="moose"> property binding -->
-
-<!-- <script>
-  let i = 'Javascriptscope'
-</script> -->
-
-<!-- <p>{{ message }}</p>
-
-<app-navbar></app-navbar>
-<app-post [fromParent] = 'parentMessage' (messageEvent)="reciveMessage($event)"></app-post>
-<p>{{ fromChildOutput }}</p>
- -->
+<div class="preview-area">
+  <h1>{{ postTitle }}</h1>
+  <p> {{ postDetails}}</p>
+</div>

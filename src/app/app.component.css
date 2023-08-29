@@ -1,3 +1,10 @@
-.text-red{
+/* .text-red{
   color: red;
+} */
+
+.form-area,
+.preview-area
+ {
+  margin: 50px;
+  text-align: center;
 }
