@@ -8,3 +8,8 @@
   margin: 50px;
   text-align: center;
 }
+
+.add-background {
+  background-color: yellow;
+  padding: 10px;
+}
