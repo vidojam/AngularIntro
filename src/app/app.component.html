@@ -1,4 +1,43 @@
-<div class="form-area">
+<p>{{ postArray }}</p>
+
+<ul>
+  <li>{{ postArray[0] }}</li>
+  <li>{{ postArray[1] }}</li>
+  <li>{{ postArray[2] }}</li>
+  <li>{{ postArray[3] }}</li>
+  <li>{{ postArray[4] }}</li> 
+</ul>
+
+<p>Fetching Using ngFor Directive</p>
+
+<ul>
+  <li *ngFor = "let post of postArray"> {{ post }} </li>
+</ul>
+
+<p>Fetching Object Array</p>
+
+<ul>
+  <li *ngFor = "let post of objArray"> {{ post | json }}</li>
+</ul>
+
+<button>Add New Data</button>
+
+<ul>
+  <li ngFor = "let post of ObjArray"
+  {{ post.postTitle }}>
+  <button (click)= "onDelete(post)" >Delete</button>
+
+  </li>
+</ul>
+
+
+<!-- get post title only -->
+<ul>
+  <li *ngFor = "let post of objArray"> {{ post.postTitle }}</li>
+</ul>
+
+
+<!-- <div class="form-area">
   <h1>Post Form</h1>
   <br><Br>
     <input type="text" placeholder="Post Title" [(ngModel)] = "postTitle" >
@@ -19,4 +58,4 @@
   <h1 ><span [class.add-background]="addBackground" >{{postTitle}}</span></h1>
   <p> {{ postDetails}}</p>
   <a [href]="postURL" target="_blank" [style.display]="postURL ? 'block' : 'none'"> More Details</a>
-</div>
+</div> -->
