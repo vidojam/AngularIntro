@@ -1,40 +1,51 @@
 <p>{{ postArray }}</p>
 
-<ul>
+
+<!-- <ul>
   <li>{{ postArray[0] }}</li>
   <li>{{ postArray[1] }}</li>
-  <li>{{ postArray[2] }}</li>
   <li>{{ postArray[3] }}</li>
   <li>{{ postArray[4] }}</li> 
 </ul>
 
-<p>Fetching Using ngFor Directive</p>
+<p>Fetching Using ngFor Directive</p> -->
 
-<ul>
+<!-- <ul>
   <li *ngFor = "let post of postArray"> {{ post }} </li>
-</ul>
+</ul> -->
 
 <p>Fetching Object Array</p>
 
-<ul>
-  <li *ngFor = "let post of objArray"> {{ post | json }}</li>
-</ul>
+<button (click)="addNew()" >Add New Data</button>
 
-<button>Add New Data</button>
+<div *ngIf = 'objArray.length > 0' >
+  <ul>
+    <li *ngFor = "let post of objArray; let i = index" > 
+      {{ post.postTitle }}
+      <button (click)="onDelete(i)" >Delete</button>
+    </li>
+  </ul>
+</div>
 
-<ul>
+<div *ngIf = 'objArray.length == 0'>
+  <p>There is no data to fetch ...</p>
+</div>
+
+<!-- <button>Add New Data</button> -->
+
+<!-- <ul>
   <li ngFor = "let post of ObjArray"
   {{ post.postTitle }}>
   <button (click)= "onDelete(post)" >Delete</button>
 
   </li>
-</ul>
+</ul> -->
 
 
 <!-- get post title only -->
-<ul>
+<!-- <ul>
   <li *ngFor = "let post of objArray"> {{ post.postTitle }}</li>
-</ul>
+</ul> -->
 
 
 <!-- <div class="form-area">
